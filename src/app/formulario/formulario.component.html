@@ -1,0 +1,14 @@
+<label>
+  Nombre:
+  <!--Registramos el control en el template. Una vez que creamos el control en la clase componente, debemos asociarlo a un control de formulario en el template.-->
+  <input type="text" [formControl]="nombre" />
+</label>
+
+<!--En este ejemplo mostramos como mostrar el valor actual utilizando interpolación en el template.-->
+<p>
+  Valor: {{nombre.value}}
+</p>
+
+<p>
+  <button (click)="updateNombre()">Actualizar Nombre</button>
+</p>
